@@ -32,36 +32,20 @@ Model machine learning dan deep learning yang digunakan yakni:
       - Rawan Overfitting
       - Interpretasi yang Minim
 
-Pada tahap awal sesuai dengan alur dari data science life cycle, yaitu melakukan analisis data, salah satu insight yang paling krusial adalah meninjau distribusi label sentiment.
-...
+Pada tahap awal sesuai dengan alur dari data science life cycle, yaitu melakukan analisis data, salah satu insight yang paling krusial adalah meninjau distribusi label sentiment dan distribusi kata-kata yang mayoritas di setiap jenis sentiment.
 
-Kemudian disertai beberapa visualisasi wordcloud per masing-masing label sentiment
-... 
+Tahap selanjutnya yakni melakukan pemrosesan data, dikarenakan data kali ini berupa teks, dan mesin hanya memahami angka, maka penulis menerapkan metode `Count Vectorization` untuk mengubah teks menjadi angka dan `One Hot Encoder` untuk mengubah label sentiment menjadi indeks kategori.
 
-Dari insight yang dimiliki ...
-
-Tahap selanjutnya yakni melakukan pemrosesan data, dikarenakan data kali ini berupa teks, dan mesin hanya memahami angka, maka penulis menerapkan metode `Count Vectorization` untuk mengubah teks menjadi angka seperti yang terlihat pada gambar ...
-![](https://www.researchgate.net/publication/354354484/figure/fig2/AS:1080214163595268@1634554534648/Illustration-of-count-vectorization.jpg)
-<p align=center>hai</p>
+Tahap modeling, dikarenakan perbandingan yang dilakukan mengaitkan aspek klasifikasi antara algoritma machine learning dan deep learning, maka salah satu metriks yang penulis gunakan dalam menentukan performa model yang paling optimal adalah dari metriks `akurasi uji` dikarenakan pada kasus ini label nya berupa `klasifikasi`.
 
 ### The Result
-
+Nama Model | Parameters | Akurasi Latih (%) | Akurasi Uji (%)
+---|---|---|---
+Random Forest Baseline | Default | 100 | 59
+Random Forest Tuning | `max depth = 15`, `n_estimators = 500`, `max_features = 'auto'` | 90 | 60
+Bidirectional LSTM | 2,661,667 Trainable Parameters | 89.94 | 96.97
 
 ### Contact Person
+M. Alif Ramadhan, 19 Tahun (2003) dengan pengalaman professional di bidang Machine Learning 3 tahun.
 
-
-## Dataset Information
-
-Source dataset on this project is from twitter content about "Pelaksanaan Pilpres 2019", total rows of datsets is 1,815 row and contains sentiment `Positive`, `Negative`, and `Neutral`.
-
-## Objective Outcome
-
-Engineering should experiment with several preprocessing and vectorization algorithm then implement machine learning model such as random forest and LSTM with hyperparameter tuning.
-
-## Project Breakdown
-
-- [x] Objective Understanding
-- [x] Apply Exploratory Data Analysis
-- [x] Apply Several Preprocessing Algorithm
-- [x] Apply ML Modeling and Benchmarking
-- [x] Create Presentation Project
+[Tentang Saya Lebih Lanjut](https://www.dicoding.com/blog/belajar-di-idcamp-untuk-mengasah-skill-machine-learning/)
